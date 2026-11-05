@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#050507">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Tecla: piano, violín y trompeta en un teclado táctil.">
+  <title>Tecla</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="iconos/tecla-192.png">
+  <link rel="apple-touch-icon" href="iconos/tecla-192.png">
+  <link rel="preload" href="fuentes/tektur-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fuentes/chakra-petch-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tecla.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="barra">
+      <div class="marca">
+        <p class="rotulo" aria-label="Tecla"><span class="rotulo-texto" data-texto="TECLA">TECLA</span></p>
+        <p class="estado" id="estado" role="status" aria-live="polite" data-estado="apagado"><i class="led" aria-hidden="true"></i><span id="estado-texto">Apagado</span></p>
+      </div>
+
+      <div class="fila fila-1">
+        <div class="seg" id="sel-instrumento" role="radiogroup" aria-label="Instrumento">
+          <button type="button" role="radio" data-valor="piano">Piano</button>
+          <button type="button" role="radio" data-valor="violin">Violín</button>
+          <button type="button" role="radio" data-valor="trompeta">Trompeta</button>
+        </div>
+        <div class="seg seg-sub" id="sel-piano" role="radiogroup" aria-label="Tipo de piano">
+          <button type="button" role="radio" data-valor="piano-moderno">Moderno</button>
+          <button type="button" role="radio" data-valor="piano-clasico">Clásico</button>
+        </div>
+        <span class="empuje" aria-hidden="true"></span>
+        <button type="button" class="btn btn-silenciar" id="btn-silenciar" aria-pressed="false"><svg class="ico-son" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter"><path d="M3 9h4l5-4v14l-5-4H3z"/><path d="M16 8.5c1.2 1 1.8 2.2 1.8 3.5s-.6 2.5-1.8 3.5M19 5.5c2 1.8 3 4 3 6.5s-1 4.7-3 6.5"/></svg><svg class="ico-mudo" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter"><path d="M3 9h4l5-4v14l-5-4H3z"/><path d="M16 9l6 6M22 9l-6 6"/></svg><span class="etq">Silenciar</span></button>
+        <button type="button" class="btn btn-diag" id="btn-diag" aria-controls="diag"><span class="etq etq-larga">Diagnóstico</span><span class="etq etq-corta" aria-hidden="true">Diag</span><span class="tic" id="diag-tic" hidden></span></button>
+      </div>
+
+      <div class="fila fila-2">
+        <div class="seg seg-fuente" id="sel-fuente" role="radiogroup" aria-label="Fuente del sonido">
+          <button type="button" role="radio" data-valor="muestras"><span class="l1">Grabado</span><span class="l2 normal">instrumento real</span><span class="l2 solo">solo sintetizado</span></button>
+          <button type="button" role="radio" data-valor="sintesis"><span class="l1">Sintetizado</span><span class="l2">por Claude</span></button>
+        </div>
+        <div class="octava" role="group" aria-label="Octava">
+          <button type="button" class="btn btn-cuadrado" id="oct-menos" aria-label="Bajar una octava (Z)">−</button>
+          <p class="oct-lectura" aria-live="polite"><span class="oct-num" id="oct-valor">OCT 3</span><span class="oct-tramo" id="oct-tramo">DO3–DO5</span></p>
+          <button type="button" class="btn btn-cuadrado" id="oct-mas" aria-label="Subir una octava (X)">+</button>
+        </div>
+        <label class="volumen">
+          <span class="vol-etq">Vol</span>
+          <input type="range" id="volumen" min="0" max="100" step="1" value="80" aria-label="Volumen">
+          <output id="vol-valor" for="volumen">80</output>
+        </label>
+      </div>
+    </header>
+
+    <main class="escenario">
+      <div class="teclado deshabilitado" id="teclado" aria-label="Teclado de dos octavas" aria-disabled="true"></div>
+
+      <div class="velo" id="velo" hidden>
+        <div class="velo-caja" role="alert">
+          <p class="velo-titulo" id="velo-titulo">Preparando</p>
+          <p class="velo-texto" id="velo-texto"></p>
+          <div class="barrido" aria-hidden="true"><i></i></div>
+          <button type="button" class="btn btn-grande" id="velo-boton" hidden>Reintentar</button>
+        </div>
+      </div>
+
+      <section class="diag" id="diag" hidden aria-label="Diagnóstico">
+        <div class="diag-cab">
+          <h2>Diagnóstico</h2>
+          <p class="diag-nota">Cifras del navegador y del motor; lo que no existe sale como «no disponible».</p>
+          <p class="diag-copiado" role="status" hidden></p>
+          <button type="button" class="btn" data-accion="sesion">Prueba · 10 min</button>
+          <button type="button" class="btn btn-cian" data-accion="copiar">Copiar informe</button>
+          <button type="button" class="btn btn-cuadrado" data-accion="cerrar" aria-label="Cerrar diagnóstico">×</button>
+        </div>
+        <div class="diag-cuerpo">
+          <div class="diag-col">
+            <h3>En vivo <small>cada segundo</small></h3>
+            <dl class="diag-vivo"></dl>
+            <ul class="diag-creditos" aria-label="Créditos de las grabaciones"></ul>
+          </div>
+          <div class="diag-col">
+            <h3>Sesión de prueba <small class="diag-estado-sesion">sin empezar</small></h3>
+            <div class="diag-progreso" aria-hidden="true"><i></i></div>
+            <dl class="diag-sesion" hidden></dl>
+            <p class="diag-vacio">Pulsa «Prueba · 10 min», cierra el panel y toca durante diez minutos. Al acabar, copia el informe y pégalo en el chat.</p>
+            <textarea class="diag-informe" readonly hidden aria-label="Informe de diagnóstico"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <p class="aviso-breve" id="aviso-breve" role="status" hidden></p>
+    </main>
+  </div>
+
+  <section class="inicio" id="inicio" aria-label="Inicio">
+    <div class="inicio-centro">
+      <h1 class="rotulo rotulo-grande"><span class="rotulo-texto" data-texto="TECLA">TECLA</span></h1>
+      <p class="inicio-sub">Piano <b>·</b> Violín <b>·</b> Trompeta</p>
+      <button type="button" class="btn btn-grande btn-empezar" id="inicio-boton">Toca para empezar</button>
+      <p class="inicio-estado" id="inicio-estado" role="status" aria-live="polite">El audio necesita un toque para arrancar.</p>
+      <p class="inicio-error" id="inicio-error" role="alert" hidden></p>
+      <p class="inicio-creditos" id="inicio-creditos"></p>
+    </div>
+    <div class="inicio-teclas" aria-hidden="true"></div>
+  </section>
+
+  <section class="girar" id="girar" aria-label="Gira el móvil">
+    <p class="rotulo girar-rotulo"><span class="rotulo-texto" data-texto="TECLA">TECLA</span></p>
+    <div class="girar-movil" aria-hidden="true"><i></i></div>
+    <p class="girar-titulo">Gira el móvil</p>
+    <p class="girar-texto">Tecla se toca en horizontal: así caben las dos octavas.</p>
+  </section>
+</body>
+</html>

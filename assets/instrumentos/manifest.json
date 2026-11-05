@@ -1,0 +1,547 @@
+{
+  "version": 1,
+  "presets": {
+    "piano-clasico": {
+      "fuente": "Salamander Grand Piano (copia de los ejemplos de Tone.js, Tonejs/audio)",
+      "autor": "Alexander Holm",
+      "licencia": "CC-BY-3.0",
+      "zonas": [
+        {
+          "archivo": "piano/A0.ogg",
+          "raiz": 21,
+          "desde": 21,
+          "hasta": 22,
+          "bucle": null,
+          "ganancia": 0.3626
+        },
+        {
+          "archivo": "piano/C1.ogg",
+          "raiz": 24,
+          "desde": 23,
+          "hasta": 25,
+          "bucle": null,
+          "ganancia": 0.3649
+        },
+        {
+          "archivo": "piano/Ds1.ogg",
+          "raiz": 27,
+          "desde": 26,
+          "hasta": 28,
+          "bucle": null,
+          "ganancia": 0.344
+        },
+        {
+          "archivo": "piano/Fs1.ogg",
+          "raiz": 30,
+          "desde": 29,
+          "hasta": 31,
+          "bucle": null,
+          "ganancia": 0.3681
+        },
+        {
+          "archivo": "piano/A1.ogg",
+          "raiz": 33,
+          "desde": 32,
+          "hasta": 34,
+          "bucle": null,
+          "ganancia": 0.3244
+        },
+        {
+          "archivo": "piano/C2.ogg",
+          "raiz": 36,
+          "desde": 35,
+          "hasta": 37,
+          "bucle": null,
+          "ganancia": 0.3658
+        },
+        {
+          "archivo": "piano/Ds2.ogg",
+          "raiz": 39,
+          "desde": 38,
+          "hasta": 40,
+          "bucle": null,
+          "ganancia": 0.3221
+        },
+        {
+          "archivo": "piano/Fs2.ogg",
+          "raiz": 42,
+          "desde": 41,
+          "hasta": 43,
+          "bucle": null,
+          "ganancia": 0.289
+        },
+        {
+          "archivo": "piano/A2.ogg",
+          "raiz": 45,
+          "desde": 44,
+          "hasta": 46,
+          "bucle": null,
+          "ganancia": 0.344
+        },
+        {
+          "archivo": "piano/C3.ogg",
+          "raiz": 48,
+          "desde": 47,
+          "hasta": 49,
+          "bucle": null,
+          "ganancia": 0.3435
+        },
+        {
+          "archivo": "piano/Ds3.ogg",
+          "raiz": 51,
+          "desde": 50,
+          "hasta": 52,
+          "bucle": null,
+          "ganancia": 0.3345
+        },
+        {
+          "archivo": "piano/Fs3.ogg",
+          "raiz": 54,
+          "desde": 53,
+          "hasta": 55,
+          "bucle": null,
+          "ganancia": 0.3476
+        },
+        {
+          "archivo": "piano/A3.ogg",
+          "raiz": 57,
+          "desde": 56,
+          "hasta": 58,
+          "bucle": null,
+          "ganancia": 0.3508
+        },
+        {
+          "archivo": "piano/C4.ogg",
+          "raiz": 60,
+          "desde": 59,
+          "hasta": 61,
+          "bucle": null,
+          "ganancia": 0.3513
+        },
+        {
+          "archivo": "piano/Ds4.ogg",
+          "raiz": 63,
+          "desde": 62,
+          "hasta": 64,
+          "bucle": null,
+          "ganancia": 0.4311
+        },
+        {
+          "archivo": "piano/Fs4.ogg",
+          "raiz": 66,
+          "desde": 65,
+          "hasta": 67,
+          "bucle": null,
+          "ganancia": 0.3076
+        },
+        {
+          "archivo": "piano/A4.ogg",
+          "raiz": 69,
+          "desde": 68,
+          "hasta": 70,
+          "bucle": null,
+          "ganancia": 0.331
+        },
+        {
+          "archivo": "piano/C5.ogg",
+          "raiz": 72,
+          "desde": 71,
+          "hasta": 73,
+          "bucle": null,
+          "ganancia": 0.3241
+        },
+        {
+          "archivo": "piano/Ds5.ogg",
+          "raiz": 75,
+          "desde": 74,
+          "hasta": 76,
+          "bucle": null,
+          "ganancia": 0.3407
+        },
+        {
+          "archivo": "piano/Fs5.ogg",
+          "raiz": 78,
+          "desde": 77,
+          "hasta": 79,
+          "bucle": null,
+          "ganancia": 0.3123
+        },
+        {
+          "archivo": "piano/A5.ogg",
+          "raiz": 81,
+          "desde": 80,
+          "hasta": 82,
+          "bucle": null,
+          "ganancia": 0.4796
+        },
+        {
+          "archivo": "piano/C6.ogg",
+          "raiz": 84,
+          "desde": 83,
+          "hasta": 85,
+          "bucle": null,
+          "ganancia": 0.5698
+        },
+        {
+          "archivo": "piano/Ds6.ogg",
+          "raiz": 87,
+          "desde": 86,
+          "hasta": 88,
+          "bucle": null,
+          "ganancia": 0.4243
+        },
+        {
+          "archivo": "piano/Fs6.ogg",
+          "raiz": 90,
+          "desde": 89,
+          "hasta": 91,
+          "bucle": null,
+          "ganancia": 0.4896
+        },
+        {
+          "archivo": "piano/A6.ogg",
+          "raiz": 93,
+          "desde": 92,
+          "hasta": 94,
+          "bucle": null,
+          "ganancia": 0.4087
+        },
+        {
+          "archivo": "piano/C7.ogg",
+          "raiz": 96,
+          "desde": 95,
+          "hasta": 97,
+          "bucle": null,
+          "ganancia": 0.4984
+        },
+        {
+          "archivo": "piano/Ds7.ogg",
+          "raiz": 99,
+          "desde": 98,
+          "hasta": 100,
+          "bucle": null,
+          "ganancia": 0.5309
+        },
+        {
+          "archivo": "piano/Fs7.ogg",
+          "raiz": 102,
+          "desde": 101,
+          "hasta": 103,
+          "bucle": null,
+          "ganancia": 0.5652
+        },
+        {
+          "archivo": "piano/A7.ogg",
+          "raiz": 105,
+          "desde": 104,
+          "hasta": 106,
+          "bucle": null,
+          "ganancia": 0.5786
+        },
+        {
+          "archivo": "piano/C8.ogg",
+          "raiz": 108,
+          "desde": 107,
+          "hasta": 108,
+          "bucle": null,
+          "ganancia": 0.5719
+        }
+      ],
+      "ataque": 0.001,
+      "liberacion": 0.3
+    },
+    "violin": {
+      "fuente": "VS Chamber Orchestra: Community Edition (VSCO-2 CE), Solo Violin Arco Vib f",
+      "autor": "Versilian Studios (Sam Gossner) e Ivy Audio (Simon Dalzell)",
+      "licencia": "CC0-1.0",
+      "zonas": [
+        {
+          "archivo": "violin/G3.ogg",
+          "raiz": 55,
+          "desde": 55,
+          "hasta": 55,
+          "bucle": {
+            "inicio": 1.34,
+            "fin": 2.176875
+          },
+          "ganancia": 0.3339
+        },
+        {
+          "archivo": "violin/A3.ogg",
+          "raiz": 57,
+          "desde": 56,
+          "hasta": 58,
+          "bucle": {
+            "inicio": 1.38,
+            "fin": 1.9897917
+          },
+          "ganancia": 0.3374
+        },
+        {
+          "archivo": "violin/C4.ogg",
+          "raiz": 60,
+          "desde": 59,
+          "hasta": 61,
+          "bucle": {
+            "inicio": 1.19,
+            "fin": 2.2394375
+          },
+          "ganancia": 0.4016
+        },
+        {
+          "archivo": "violin/E4.ogg",
+          "raiz": 64,
+          "desde": 62,
+          "hasta": 65,
+          "bucle": {
+            "inicio": 1.06,
+            "fin": 2.33825
+          },
+          "ganancia": 0.4539
+        },
+        {
+          "archivo": "violin/G4.ogg",
+          "raiz": 67,
+          "desde": 66,
+          "hasta": 67,
+          "bucle": {
+            "inicio": 1.33,
+            "fin": 2.0976458
+          },
+          "ganancia": 0.3083
+        },
+        {
+          "archivo": "violin/A4.ogg",
+          "raiz": 69,
+          "desde": 68,
+          "hasta": 70,
+          "bucle": {
+            "inicio": 1.17,
+            "fin": 1.9291042
+          },
+          "ganancia": 0.5536
+        },
+        {
+          "archivo": "violin/C5.ogg",
+          "raiz": 72,
+          "desde": 71,
+          "hasta": 73,
+          "bucle": {
+            "inicio": 1.17,
+            "fin": 1.7708125
+          },
+          "ganancia": 0.3054
+        },
+        {
+          "archivo": "violin/E5.ogg",
+          "raiz": 76,
+          "desde": 74,
+          "hasta": 77,
+          "bucle": {
+            "inicio": 1.24,
+            "fin": 1.9195
+          },
+          "ganancia": 0.4118
+        },
+        {
+          "archivo": "violin/G5.ogg",
+          "raiz": 79,
+          "desde": 78,
+          "hasta": 79,
+          "bucle": {
+            "inicio": 1.39,
+            "fin": 2.1925
+          },
+          "ganancia": 0.3991
+        },
+        {
+          "archivo": "violin/A5.ogg",
+          "raiz": 81,
+          "desde": 80,
+          "hasta": 82,
+          "bucle": {
+            "inicio": 0.62,
+            "fin": 1.514625
+          },
+          "ganancia": 0.3581
+        },
+        {
+          "archivo": "violin/C6.ogg",
+          "raiz": 84,
+          "desde": 83,
+          "hasta": 85,
+          "bucle": {
+            "inicio": 0.61,
+            "fin": 1.3029167
+          },
+          "ganancia": 0.3646
+        },
+        {
+          "archivo": "violin/E6.ogg",
+          "raiz": 88,
+          "desde": 86,
+          "hasta": 89,
+          "bucle": {
+            "inicio": 1.27,
+            "fin": 2.0175
+          },
+          "ganancia": 0.3613
+        },
+        {
+          "archivo": "violin/G6.ogg",
+          "raiz": 91,
+          "desde": 90,
+          "hasta": 91,
+          "bucle": {
+            "inicio": 1.4,
+            "fin": 2.673375
+          },
+          "ganancia": 0.35
+        },
+        {
+          "archivo": "violin/A6.ogg",
+          "raiz": 93,
+          "desde": 92,
+          "hasta": 94,
+          "bucle": {
+            "inicio": 0.7,
+            "fin": 1.6082083
+          },
+          "ganancia": 0.3441
+        },
+        {
+          "archivo": "violin/C7.ogg",
+          "raiz": 96,
+          "desde": 95,
+          "hasta": 100,
+          "bucle": {
+            "inicio": 1.15,
+            "fin": 1.9242917
+          },
+          "ganancia": 0.2949
+        }
+      ],
+      "ataque": 0.005,
+      "liberacion": 0.2
+    },
+    "trompeta": {
+      "fuente": "VS Chamber Orchestra: Community Edition (VSCO-2 CE), Trumpet sus v3",
+      "autor": "Versilian Studios (Sam Gossner) e Ivy Audio (Simon Dalzell)",
+      "licencia": "CC0-1.0",
+      "zonas": [
+        {
+          "archivo": "trompeta/F3.ogg",
+          "raiz": 53,
+          "desde": 52,
+          "hasta": 54,
+          "bucle": {
+            "inicio": 1.22,
+            "fin": 1.8793542
+          },
+          "ganancia": 0.5712
+        },
+        {
+          "archivo": "trompeta/A3.ogg",
+          "raiz": 57,
+          "desde": 55,
+          "hasta": 58,
+          "bucle": {
+            "inicio": 0.73,
+            "fin": 1.3813125
+          },
+          "ganancia": 0.5725
+        },
+        {
+          "archivo": "trompeta/C4.ogg",
+          "raiz": 60,
+          "desde": 59,
+          "hasta": 61,
+          "bucle": {
+            "inicio": 0.83,
+            "fin": 2.0279583
+          },
+          "ganancia": 0.4913
+        },
+        {
+          "archivo": "trompeta/Ds4.ogg",
+          "raiz": 63,
+          "desde": 62,
+          "hasta": 64,
+          "bucle": {
+            "inicio": 1.25,
+            "fin": 1.9026458
+          },
+          "ganancia": 0.463
+        },
+        {
+          "archivo": "trompeta/G4.ogg",
+          "raiz": 67,
+          "desde": 65,
+          "hasta": 68,
+          "bucle": {
+            "inicio": 1.13,
+            "fin": 2.174375
+          },
+          "ganancia": 0.352
+        },
+        {
+          "archivo": "trompeta/As4.ogg",
+          "raiz": 70,
+          "desde": 69,
+          "hasta": 71,
+          "bucle": {
+            "inicio": 0.67,
+            "fin": 1.993125
+          },
+          "ganancia": 0.3583
+        },
+        {
+          "archivo": "trompeta/D5.ogg",
+          "raiz": 74,
+          "desde": 72,
+          "hasta": 75,
+          "bucle": {
+            "inicio": 0.71,
+            "fin": 1.5616458
+          },
+          "ganancia": 0.2905
+        },
+        {
+          "archivo": "trompeta/F5.ogg",
+          "raiz": 77,
+          "desde": 76,
+          "hasta": 78,
+          "bucle": {
+            "inicio": 0.72,
+            "fin": 1.7269583
+          },
+          "ganancia": 0.2303
+        },
+        {
+          "archivo": "trompeta/A5.ogg",
+          "raiz": 81,
+          "desde": 79,
+          "hasta": 82,
+          "bucle": {
+            "inicio": 0.84,
+            "fin": 1.7971875
+          },
+          "ganancia": 0.3108
+        },
+        {
+          "archivo": "trompeta/C6.ogg",
+          "raiz": 84,
+          "desde": 83,
+          "hasta": 84,
+          "bucle": {
+            "inicio": 1.16,
+            "fin": 1.8795833
+          },
+          "ganancia": 0.2526
+        }
+      ],
+      "ataque": 0.005,
+      "liberacion": 0.12
+    }
+  }
+}
